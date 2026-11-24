@@ -16,14 +16,28 @@
 > decide? **Risk:** what goes wrong if the assumption is wrong, and how
 > would you check it?
 
-1. Assumption 1
-   - **Question:** _TODO_
-   - **Assumption:** _TODO_
-   - **Risk:** _TODO_
-2. Assumption 2
-   - **Question:** _TODO_
-   - **Assumption:** _TODO_
-   - **Risk:** _TODO_
+
+### Assumption 1 — The Time of Day of Dinner
+
+**Question:**  
+When does the dinner rush start, and how long does it last?
+
+**Assumption:**  
+I assume it's sometime after 4–5 PM, when customer demand starts increasing.
+
+**Risk:**  
+If I'm wrong, we might not have the right amount of stock available for the dinner rush.
+
+### Assumption 2 — What Does "Too Low" Mean?
+
+**Question:**  
+What is the specific threshold for an ingredient to be considered low stock?
+
+**Assumption:**  
+Since I don't know what type of restaurant this is or which ingredients are used most frequently, I'll use 10 units as a starting low-stock threshold for all ingredients.
+
+**Risk:**  
+Some ingredients may be used much faster than others, so a universal threshold could fail to warn us about shortages in time. Perishable ingredients also need closer monitoring because overstocking them could lead to food waste.
 
 ## The 3+ edge cases you found and handled
 
@@ -33,9 +47,15 @@
 > `data/SOURCE.md` for the full list of edge-case types. You need at
 > least 3 different types.
 
-1. _TODO_
-2. _TODO_
-3. _TODO_
+
+## Edge Cases
+
+| # | Line | Data | Issue |
+|---|---|---|---|
+| 1 |304 | `REMOVE,Another Fake Item,1` | Item was never added |
+| 2 |108 | `SEARCH,Dried Oregano` | Check whether item exists |
+| 3 | 39 | Blank line | Empty transaction |
+
 
 ## Function scope
 

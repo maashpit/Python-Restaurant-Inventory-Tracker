@@ -11,6 +11,8 @@ Before your final push you'll rename this folder to analysis/.
 """
 import json
 
+from dataclasses import dataclass
+
 
 class YourInventoryItem:
     """
